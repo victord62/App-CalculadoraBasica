@@ -20,7 +20,7 @@ public class CalculadoraSumaUITest {
     @Test
     public void testSumaSimpleUI() {
         onView(withId(R.id.etOper1)).perform(typeText("5"));
-        onView(withId(R.id.etOper2)).perform(typeText("4"));
+        onView(withId(R.id.etOper2)).perform(typeText("40"));
         Espresso.closeSoftKeyboard();
         onView(withId(R.id.btnCalcula)).perform(click());
         onView(withId(R.id.txtRes)).check(matches(withText("9.0")));

@@ -21,6 +21,6 @@ public class CalculadoraTest {
         sut.setOperacion(Calculadora.OPERACION.SUMA);
         double resultado = sut.opera();
 
-        assertEquals(9.0, resultado, 0.01);
+        assertEquals(90.0, resultado, 0.01);
     }
 }
