@@ -1,6 +1,5 @@
-name: Android Tests
+name: Android CI
 
-# Trigger SonarCloud analysis on pushes to the long-lived branches.
 on:
   push:
     branches:
@@ -8,17 +7,14 @@ on:
 
 jobs:
 
-  # Run unit and ui tests together, to capture the test coverage of both
   android-tests:
     name: Android Tests
-    # ubuntu-latest will migrate to Ubuntu 26 on 2026-10-19; pin 24.04 to avoid the change
     runs-on: ubuntu-24.04
 
     steps:
       - name: checkout
         uses: actions/checkout@v7
         with:
-          # full history so SonarCloud SCM/new-code detection works
           fetch-depth: 0
 
       - name: Enable KVM
